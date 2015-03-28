@@ -1,8 +1,5 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = '123';
-$database = 'data';
+include 'session-connect.php';
 
 $loginUser = $_POST['user'];
 $loginUser = stripslashes($loginUser);
@@ -11,7 +8,6 @@ $loginPass = stripslashes($loginPass);
 
 $hashed = hash('sha256', $loginPass, 'false');
 
-$conn = mysqli_connect($host, $user, $password, $database);
 $query = "SELECT email, hash, priv FROM login WHERE email='" . $loginUser . "' AND hash='" . $hashed . "'";
 
 $result = mysqli_query($conn, $query);

@@ -1,14 +1,10 @@
 <?php
 
-$host = 'localhost';
-$user = 'root';
-$password = '123';
-$database = 'data';
+include 'session-connect';
 $table = 'admin';
 
 $post = array_values($_POST);
 
-$conn = mysqli_connect($host, $user, $password, $database);
 $insert = 'INSERT INTO ' . $table . ' (Course, Term, Hours, Status, Day, Start, End, Semester) VALUES (';
 print_r($post);
 //finds how many rows

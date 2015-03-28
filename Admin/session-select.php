@@ -1,12 +1,7 @@
 <?php
 
-$host = 'localhost';
-$user = 'root';
-$password = '123';
-$database = 'data';
+include 'session-connect.php';
 $table = 'admin';
-
-$conn = mysqli_connect($host, $user, $password, $database);
 
 $query = "SELECT DISTINCT Semester FROM " . $table;
 

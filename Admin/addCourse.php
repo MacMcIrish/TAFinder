@@ -18,6 +18,11 @@
 
 	<body>
 		<button onclick='addNewRow()'> Add new Row </button>
+		
+		<button onclick='openNewSession()'>Open/Close Session</button>
+		
+		<button onclick='runAnalysis()'>Run analysis</button>
+		
 		<form name='form' method="post" action="admin-connect.php">
 			<table width='600' id='table'>
 				<tr>

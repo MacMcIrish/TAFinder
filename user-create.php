@@ -1,15 +1,10 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = '123';
-$database = 'data';
-$table = 'Login';
+include 'session-connect.php';
+$table = 'login';
 
 if (!isset($_POST['newUser'])) {
 	die('Unable to accept newUser variable');
 }
-
-$conn = mysqli_connect($host, $user, $password, $database);
 
 $newUser = $_POST['newUser'];
 $newPass = $_POST['newPass'];
@@ -32,6 +27,8 @@ if (mysqli_query($conn, $query)) {
 }
 
 mysqli_close($conn);
+echo $query;
 ?>
 <br>
+
 <a href="login.php">Go Back</a>

@@ -4,13 +4,8 @@ if(!isset($_POST['sessionSelect'])){
 	die("Unable to find session.");
 }
 
-$host = 'localhost';
-$user = 'root';
-$password = '123';
-$database = 'data';
+include 'session-connect';
 $table = 'admin';
-
-$conn = mysqli_connect($host, $user, $password, $database);
 
 $query = 'SELECT Course, Term, Hours, Status, Day, Start, End, Semester FROM ' . $table . ' WHERE Semester="' . $_POST['sessionSelect'] . '"';
 //echo $query;

@@ -1,14 +1,9 @@
 <?php
 
-$host = 'localhost';
-$user = 'root';
-$password = '123';
-$database = 'data';
+include 'session-connect.php';
 $table = 'admin';
 
 $sessionList = [];
-
-$conn = mysqli_connect($host, $user, $password, $database);
 
 //Fetches other sessions to find latest entry
 $query = 'SELECT DISTINCT Semester FROM ' . $table;
