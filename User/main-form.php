@@ -2,7 +2,6 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="form_css.css" />
 		<?php
-		include 'user-check.php';
 		include "form-check.php";
 
 		function endSession() {
@@ -12,7 +11,7 @@
 	</head>
 	<body>
 		<div>
-			<form id="form" name="applicantForm" method="post" action="db_connect.php">
+			<form id="form" name="applicantForm" method="post" action="course-select.php">
 
 				<fieldset>
 					<legend>

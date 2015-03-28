@@ -17,8 +17,9 @@
 	</head>
 	<h1>Select Session to Apply for:</h1>
 	<br>
-	<form method="post" name="courseSelect" >
+	<form method="post" name="courseSelect" action='http://localhost/tafinder/user/main-form.php'>
 		<?php include 'session-radio-buttons.php'; ?> 
+		<input type='submit'/>
 	</form>
 
 </html>
