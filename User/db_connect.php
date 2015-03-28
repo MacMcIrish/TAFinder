@@ -1,14 +1,10 @@
 <?php
 
-$host = 'localhost';
-$user = 'root';
-$password = '123';
-$database = 'data';
+include 'session-connect';
 $table = 'ta';
 
 //Establish Connection
 echo $_POST['buttonthing'];
-$conn = mysqli_connect($host, $user, $password, $database);
 
 //Test Connection
 if ($conn -> connect_error) {
