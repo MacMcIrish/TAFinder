@@ -12,7 +12,12 @@
 	<body>
 		<div>
 			<form id="form" name="applicantForm" method="post" action="course-select.php">
-
+				<fieldset>
+					<legend>
+						Session
+					</legend>
+					<input type="text" name="sessionSelect" value="<?php echo $_POST['sessionSelect']; ?>" readonly></input>
+				</fieldset>
 				<fieldset>
 					<legend>
 						Name
