@@ -23,13 +23,13 @@
 						Name
 					</legend>
 					First Name:
-					<input type="text" name="fName"/>
+					<input type="text" name="firstName"/>
 					<br>
 					Last Name:
-					<input type="text" name="lName"/>
+					<input type="text" name="lastName"/>
 					<br>
 					Student No.
-					<input type="text" name="sNumber"/>
+					<input type="text" name="studentNumber"/>
 				</fieldset>
 				<fieldset>
 					<legend>
@@ -37,9 +37,9 @@
 					</legend>
 
 					<div class="graduate">
-						<input type="radio" name="studentType" value="0" id="gradRadio">
+						<input type="radio" name="undergraduate" value="0" id="gradRadio">
 						<label for="gradRadio">Graduate</label>
-						<input type="radio"  name="studentType" value="1" id="underRadio"/>
+						<input type="radio"  name="undergraduate" value="1" id="underRadio"/>
 						<label for="underRadio">Undergraduate</label>
 					</div>
 					Please Select Student Type:
@@ -58,7 +58,7 @@
 						<option value="Science">Science</option>
 					</select>
 					Year of Study:
-					<select name="applicantYear">
+					<select name="year">
 						<option value="1">First</option>
 						<option value="2">Second</option>
 						<option value="3">Third</option>
@@ -66,10 +66,10 @@
 					</select>
 					<br>
 					UBC Employee ID:
-					<input type="text" name="UBCID"/>
+					<input type="text" name="empID"/>
 					<br>
 					UBC Email Address:
-					<input type="email" name="UBCemail"/>
+					<input type="email" name="email"/>
 					<br>
 				</fieldset>
 
@@ -83,19 +83,19 @@
 					City:
 					<input type="text" name="city"/>
 					Postal Code:
-					<input type="text" name="posCode"/>
+					<input type="text" name="postalCode"/>
 					<br>
 					Telephone:
-					<input type="text" placeholder="Home" name="homeNumber"/>
+					<input type="text" placeholder="phone" name="homeNumber"/>
 					,
-					<input type"text" placeholder="Cell" name="cellNumber"/>
+					<input type"text" placeholder="phone2" name="cellNumber"/>
 				</fieldset>
 
 				<div class="yesNo">
 					<div class="radioInput">
-						<input type="radio" name="workInCanada" value="1" id="workYes"/>
+						<input type="radio" name="eligible" value="1" id="workYes"/>
 						<label for="yes">Yes</label>
-						<input type="radio" name="workInCanada" value="0" id="workNo"/>
+						<input type="radio" name="eligible" value="0" id="workNo"/>
 						<label for="workNo">No</label>
 					</div>
 					<p> Are you eligible to work in Canada? </p>
@@ -104,9 +104,9 @@
 				<div class="yesNo">
 
 					<div class="radioInput">
-						<input type="radio" name="fullTime" value="1" id="fullYes"/>
+						<input type="radio" name="fulltime" value="1" id="fullYes"/>
 						<label for"fullYes">Yes</label>
-						<input type="radio" name="fullTime" value="0" id="fullNo"/>
+						<input type="radio" name="fulltime" value="0" id="fullNo"/>
 						<label for"fullNo">No</label>
 					</div>
 					<p> Will you be a full-time graduate/undergraduate student during the study period? </p>
@@ -114,9 +114,9 @@
 
 				<div class="yesNo">
 					<div class="radioInput">
-						<input type="radio" name="previousPos" value="1" id="preYes"/>
+						<input type="radio" name="new" value="1" id="preYes"/>
 						<label for="preYes">Yes</label>
-						<input type="radio" name="previousPos" value="0" id="preNo"/>
+						<input type="radio" name="new" value="0" id="preNo"/>
 						<label for="preNo">No</label>
 					</div>
 					<p> Have you held a previous Teaching Assistantship position at UBC Okanagan? </p>
