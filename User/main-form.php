@@ -16,7 +16,7 @@
 					<legend>
 						Session
 					</legend>
-					<input type="text" name="sessionSelect" value="<?php echo $_POST['sessionSelect']; ?>" readonly></input>
+					<input type="text" name="session" value="<?php echo $_POST['sessionSelect']; ?>" readonly></input>
 				</fieldset>
 				<fieldset>
 					<legend>
@@ -86,9 +86,9 @@
 					<input type="text" name="postalCode"/>
 					<br>
 					Telephone:
-					<input type="text" placeholder="phone" name="homeNumber"/>
+					<input type="text" placeholder="Home Number" name="phone"/>
 					,
-					<input type"text" placeholder="phone2" name="cellNumber"/>
+					<input type"text" placeholder="Cell Number" name="phone2"/>
 				</fieldset>
 
 				<div class="yesNo">
@@ -169,7 +169,7 @@
 
 				<p>How many hours per week would you like to work? (min 2, max 12)</p>
 				Preferred: 
-				<input type="number" min="2" max="12" name="prefferedHours"/>
+				<input type="number" min="2" max="12" name="preferredHours"/>
 				<br>
 				Maximum:
 				<input type="number" min="2" max="12" name="maxHours"/>
