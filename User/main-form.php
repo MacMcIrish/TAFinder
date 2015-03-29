@@ -36,7 +36,7 @@
 						UBC
 					</legend>
 
-					<div class="radioInput">
+					<div class="graduate">
 						<input type="radio" name="studentType" value="0" id="gradRadio">
 						<label for="gradRadio">Graduate</label>
 						<input type="radio"  name="studentType" value="1" id="underRadio"/>
