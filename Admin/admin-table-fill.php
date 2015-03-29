@@ -1,14 +1,13 @@
-<?php 
-
-if(!isset($_POST['sessionSelect'])){
-	die("Unable to find session.");
+<?php
+if(!isset($_SESSION['session'])){
+	die("Unable to find session.222");
 }
 
-include 'session-connect';
+include 'session-connect.php';
 $table = 'admin';
 
-$query = 'SELECT Course, Term, Hours, Status, Day, Start, End, Semester FROM ' . $table . ' WHERE Semester="' . $_POST['sessionSelect'] . '"';
-//echo $query;
+$query = 'SELECT Course, Term, Hours, Status, Day, Start, End, session FROM ' . $table . ' WHERE session="' . $_SESSION['session'] . '"';
+
 
 $result = mysqli_query($conn, $query);
 //echo 'table start<br><table>';

@@ -39,24 +39,7 @@
 			</table>
 
 		</div>
-		<table>
-			<tr>
-				Create User:
-			</tr>
-
-			<form method='post' action='user-create.php'>
-				<tr>
-					<td>User: </td><td><input type='text' name='newUser' /></td>
-				</tr>
-				<tr>
-					<td>Password: </td><td><input type='text' name='newPass' /></td>
-				</tr>
-
-				<tr>
-					<td><input type='submit'/></td>
-				</tr>
-			</form>
-		</table>
+		
 	</body>
 	<?php session_destroy(); ?>
 </html>

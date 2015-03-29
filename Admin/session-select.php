@@ -1,15 +1,20 @@
 <?php
 
 include 'session-connect.php';
-$table = 'admin';
+$table = 'sessions';
 
-$query = "SELECT DISTINCT Semester FROM " . $table;
+$query = "SELECT session, open FROM " . $table . ' WHERE 1';
 
 $result = mysqli_query($conn, $query);
 
-echo '<select name="sessionSelect">';
+echo '<select name="session">';
 while ($row = mysqli_fetch_assoc($result)) {
-	echo '<option name="session" value="' . $row['Semester'] . '">' . $row['Semester'] . '</option>';
+	if ($row['open'] == 1){
+		$s = '(open)';
+	}else{
+		$s = '(closed)';
+	}
+	echo '<option name="session" value="' . $row['session'] . '">' . $row['session'] . ' ' . $s . '</option>';
 }
 echo '</select>';
 

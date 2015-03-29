@@ -20,15 +20,10 @@ if ($numRows = mysqli_num_rows($result)) {
 		$_SESSION['loggedin'] = true;
 		//header("location:main-form.php");
 		$priv = mysqli_fetch_assoc($result);
-		if ($priv['priv'] === 'admin'){
+		if ($priv['priv'] === 'admin') {
 			$_SESSION['priv'] = 'admin';
 			header('location:/tafinder/admin/admin-front.php');
-		}elseif($priv['priv'] === 'user'){
-			$_SESSION['priv'] = 'user';
-			header('location:/tafinder/user/main-form.php');
 		}
-		
-		
 	}
 } else {
 	echo "Wrong Password. <a href='login.php'>Go back.</a>";

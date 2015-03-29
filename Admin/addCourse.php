@@ -2,10 +2,14 @@
 	<head>
 		<?php
 		include 'admin-check.php';
-		if (isset($_SESSION['sessionSelect'])) {
-			$_POST['sessionSelect'] = $_SESSION['sessionSelect'];
+		$head;
+		if (isset($_POST['session'])) {
+			$head = $_POST['session'];
+			$_SESSION['session'] = $head;
+		}elseif(isset($_SESSION['session'])){
+			$head = $_SESSION['session'];
 		}
-		echo '<h1 id="session">' . $_POST['sessionSelect'] . '</h1>';
+		echo '<h1 id="session">' . $head . '</h1>';
 		?>
 
 		<style>
@@ -46,7 +50,7 @@
 					<td><input type="text" name='day[]'/></td>
 					<td><input type="text" name='start[]'/></td>
 					<td><input type="text" name='end[]'/></td>
-					<td><input type="text" name="semester[]" value="<?php echo $_POST['sessionSelect'] ?>" readonly></td>
+					<td><input type="text" name="semester[]" value="<?php echo $head; ?>" readonly></td>
 				</tr>
 			</table>
 			<input type='submit' name='submit' value='send'/>

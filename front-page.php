@@ -7,24 +7,52 @@
 		mysqli_query($conn, $query);
 		?>
 		<style>
-			input{
+			html, body {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.form{
+				height:100%;
+				width:100%;
+				margin-bottom: -2em;
+			}
+			input {
 				width: 100px;
 				margin: 3px;
 			}
-			
+			footer {
+				border-top: solid black 1px;
+				height: 2em;
+				padding-left: 95%;
+			}
+			a {
+				position: absolute;
+				margin-right: 1%;
+				margin-left: auto;
+			}
 		</style>
-		
+
 	</head>
-	<h1>Select Session to Apply for:</h1>
-	<br>
-	<form method="post" name="courseSelect" action='http://localhost/tafinder/user/main-form.php'>
-		<?php include 'session-radio-buttons.php'; ?> 
-		<input type='submit'/>
-	</form>
+	<body>
+		<div class='form'>
+			<h1>Select Session to Apply for:</h1>
+			<br>
+			<form method="post" name="courseSelect" action='http://localhost/tafinder/user/main-form.php'>
+				<?php
+				include 'session-radio-buttons.php';
+				?>
+				<input type='submit' value="Continue"/>
+			</form>
+		</div>
+		<footer>
+			<a class='admin' href='login.php'>Sign in</a>
+		</footer>
+	</body>
 
 </html>
 <?php
-	if (isset($conn)) {
-		mysqli_close($conn);
-	};
+if (isset($conn)) {
+	mysqli_close($conn);
+};
 ?>
