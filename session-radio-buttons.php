@@ -1,7 +1,7 @@
 <?php
 include 'session-connect.php';
-$table = 'admin';
-$query = 'SELECT DISTINCT session FROM ' . $table;
+$table = 'sessions';
+$query = 'SELECT DISTINCT session FROM ' . $table . ' WHERE open=1';
 
 $result = mysqli_query($conn, $query);
 while ($rows = mysqli_fetch_array($result, MYSQLI_NUM)){

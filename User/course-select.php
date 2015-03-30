@@ -10,7 +10,6 @@ if(isset($_POST)){
 
 	</head>
 	<body>
-		<?php print_r($_POST); ?>
 		<h1>Select from available courses</h1>
 		<form name='userSubmit' action='user-test.php' method='post'>
 			<table>

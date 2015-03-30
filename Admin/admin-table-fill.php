@@ -16,7 +16,7 @@ $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_array($result, MYSQLI_NUM)){
 	echo '<tr>';
 	for ($i = 0; $i < count($row); $i++){
-		echo '<td>' . $row[$i] . '</td>';
+		echo '<td style="border: solid black 1px;">' . $row[$i] . '</td>';
 	}
 	echo '</tr>';
 }

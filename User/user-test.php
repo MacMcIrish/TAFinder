@@ -1,7 +1,5 @@
 <?php
 session_start();
-print_r($_POST);
-echo '<br>';
 $user = $_SESSION['userInfo'];
 
 include 'session-connect.php';
@@ -12,13 +10,9 @@ $f = mysqli_query($conn, 'desc ta');
 while ($r = mysqli_fetch_assoc($f)) {
 	$fields[$r['Field']] = $r['Field'];
 }
-echo '<br>FIELDS';
-print_r($fields);
-echo '<br>';
 $user = $_SESSION['userInfo'];
-print_r($user);
-echo '<br>';
 
+//Starting query to add new user to database
 $userQuery = 'INSERT INTO ta(';
 
 foreach ($fields as $key => $value) {
@@ -38,13 +32,20 @@ foreach ($fields as $key => $value) {
 		$userQuery = $userQuery . "'" . $user[$key] . "', ";
 	}
 }
-echo '<br>' . $userQuery . '<br>';
 
+if(mysqli_query($conn, $userQuery)){
+	echo 'Succesful user Query';
+}else{
+	die("User already exists, only one application per applicant please.");
+}
+
+//Each loop here adds the courses that the user has ticked off attached to the User's student number
+//TODO => Possibly change syntax to add multiple values in a single query? 
 foreach ($_POST['checked'] as $key => $value) {
 	if (isset($_POST['Taken'][$key])) {
 		if ($_POST['Taken'][$key] == 'on') {
 			$courseQuery = "INSERT INTO workson(studentNumber, courseID, semester) VALUES ('" . $user['studentNumber'] . "', '" . $value . "', '1')";
-			echo '<br>' . $courseQuery . '<br>';
+			mysqli_query($conn, $courseQuery);
 		}
 	}
 }

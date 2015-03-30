@@ -1,12 +1,12 @@
 <?php
 
-include 'session-connect';
+include 'session-connect.php';
 $table = 'admin';
 
 $post = array_values($_POST);
 
-$insert = 'INSERT INTO ' . $table . ' (Course, Term, Hours, Status, Day, Start, End, Semester) VALUES (';
-print_r($post);
+$insert = 'INSERT INTO ' . $table . ' (Course, Term, Hours, Status, Day, Start, End, session) VALUES (';
+
 //finds how many rows
 $row = count($post[0]);
 $column = count($post);
