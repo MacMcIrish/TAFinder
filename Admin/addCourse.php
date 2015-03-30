@@ -53,20 +53,20 @@
 				</tr>
 				<tr>
 					<td><input type='text' name='course[]'</td>
-					<td><input type="number" min="1" max="2" name="term[]"/></td>
+					<td><input type="number" min="1" max="2" name="semester[]"/></td>
 					<td><input type="number" min="2" max="12" name="hours[]"/></td>
 					<td><input type="text" name="type[]" /></td>
 					<td><input type="text" name='day[]'/></td>
 					<td><input type="text" name='start[]'/></td>
 					<td><input type="text" name='end[]'/></td>
-					<td><input type="text" name="semester[]" value="<?php echo $head; ?>" readonly></td>
+					<td><input type="text" name="session[]" value="<?php echo $head; ?>" readonly></td>
 				</tr>
 			</table>
 			<input type='submit' name='submit' value='send'/>
 		</form>
 		<script src='javascript.js'></script>
-		<form action="http://localhost/tafinder/logout.php">
-			<input type="submit" value="Cancel"/>
+		<form action="http://localhost/tafinder/admin/admin-front.php">
+			<input type="submit" value="Go back"/>
 		</form>
 		<table style='border: solid black 1px;'>
 			<?php

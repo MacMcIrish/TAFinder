@@ -53,7 +53,7 @@ function addNewRow() {
 	newCourse.setAttribute('name', 'course[]');
 	newCourse.setAttribute('type', 'text');
 
-	newSemester.setAttribute('name', 'term[]');
+	newSemester.setAttribute('name', 'semester[]');
 	newSemester.setAttribute('type', 'text');
 
 	newHours.setAttribute('name', 'hours[]');
@@ -71,7 +71,7 @@ function addNewRow() {
 	newEnd.setAttribute('name', 'end[]');
 	newEnd.setAttribute('type', 'text');
 	
-	newSemester.setAttribute('name', 'semester[]');
+	newSemester.setAttribute('name', 'session[]');
 	newSemester.setAttribute('value', session);
 	newSemester.readOnly = true;
 
