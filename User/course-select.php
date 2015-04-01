@@ -3,6 +3,7 @@ include 'session-connect.php';
 session_start();
 if(isset($_POST)){
 	$_SESSION['userInfo'] = $_POST;
+	$_SESSION['session'] = $_POST['session'];
 }
 ?>
 <html>
@@ -15,8 +16,16 @@ if(isset($_POST)){
 			<table>
 				<?php
 				$table = 'admin';
-				$course = $_POST['session'];
-				$query = 'SELECT Course FROM ' . $table . ' WHERE session="' . $course . '"';
+				$session = $_POST['session'];
+				$courseList = $_POST['applyCourse'];
+				$courseListQuery = ' AND ';
+				for ($i = 0; $i < count($courseList); $i++) {
+					$courseListQuery = $courseListQuery . ' Course LIKE "%' . $courseList[$i] . '%"';
+					if(($i < count($courseList) - 1)){
+						$courseListQuery = $courseListQuery . ' OR ';
+					}
+				}
+				$query = 'SELECT Course FROM ' . $table . ' WHERE session="' . $session . '" ' . $courseListQuery ;
 				$result = mysqli_query($conn, $query);
 				$i = 0;
 				while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
@@ -29,6 +38,7 @@ if(isset($_POST)){
 				}
 				?>
 			</table>
+			<?php echo $_SESSION['session']; ?>
 			<input type='submit'>
 		</form>
 	</body>

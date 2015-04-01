@@ -14,7 +14,7 @@
 			
 		</form>
 		<form action="http://localhost/tafinder/logout.php">
-			<input type="submit" value="Cancel"/>
+			<input type="submit" value="Sign out"/>
 		</form>
 	</body>
 

@@ -38,8 +38,9 @@
 			}
 		?>'/>
 		</form>
-		<button onclick='runAnalysis()'>Run analysis</button>
-
+		<form action='export.php'>
+			<input type='submit' value='Run analysis'>
+		</form>
 		<form name='form' method="post" action="admin-connect.php">
 			<table width='600' id='table'>
 				<tr>
@@ -62,7 +63,7 @@
 					<td><input type="text" name="session[]" value="<?php echo $head; ?>" readonly></td>
 				</tr>
 			</table>
-			<input type='submit' name='submit' value='send'/>
+			<input type='submit' name='submit' value='Send'/>
 		</form>
 		<script src='javascript.js'></script>
 		<form action="http://localhost/tafinder/admin/admin-front.php">

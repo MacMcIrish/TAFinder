@@ -1,0 +1,9 @@
+COSC310,2,6,Undergrad,Wednesday,630,830,W2014
+COSC211,1,4,Grad,Tuesday,430,530,W2014
+MATH317,2,4,Grad,Friday,230,430,W2014
+PHYS312,1,8,Undergrad,Tuesday,130,230,W2014
+MATH225,2,7,Undergrad,Monday,230,430,W2014
+MATH225,1,7,Undergrad,Monday,230,430,W2014
+PHYS111,1,3,Undergrad,Tuesday,430,530,W2014
+PHYS121,0,3,Undergrad,Tuesday,530,630,W2014
+CHEM121,0,4,Undergrad,Monday,130,230,W2014

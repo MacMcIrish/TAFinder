@@ -27,7 +27,7 @@ for ($i = 0; $i < $row; $i++) {
 	$query = $query . "'" . $post[($column - 2)][$i] . "')";
 	
 	if(mysqli_query($conn, $query)){
-		header('location:admin-front.php');
+		header('location:addCourse.php');
 	}else{
 		echo 'Problem<br>' .$conn->error;
 	}

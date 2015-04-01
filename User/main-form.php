@@ -36,12 +36,7 @@
 						UBC
 					</legend>
 
-					<div class="graduate">
-						<input type="radio" name="undergraduate" value="0" id="gradRadio">
-						<label for="gradRadio">Graduate</label>
-						<input type="radio"  name="undergraduate" value="1" id="underRadio"/>
-						<label for="underRadio">Undergraduate</label>
-					</div>
+					
 					Please Select Student Type:
 					<br>
 					Faculty:
@@ -59,6 +54,7 @@
 					</select>
 					Year of Study:
 					<select name="year">
+						<option value='G'>Graduate</option>
 						<option value="1">First</option>
 						<option value="2">Second</option>
 						<option value="3">Third</option>
@@ -154,16 +150,16 @@
 				<div>
 					Departments you wish to apply for (select all that apply):
 					<br>
-					<input type="checkbox" name="applyCourse" value="cosc"/>
+					<input type="checkbox" name="applyCourse[]" value="cosc"/>
 					Computer Science
 					<br>
-					<input type="checkbox" name="applyCourse" value="phys"/>
+					<input type="checkbox" name="applyCourse[]" value="phys"/>
 					Physics
 					<br>
-					<input type="checkbox" name="applyCourse" value="math"/>
+					<input type="checkbox" name="applyCourse[]" value="math"/>
 					Mathematics
 					<br>
-					<input type="checkbox" name="applyCourse" value="stat"/>
+					<input type="checkbox" name="applyCourse[]" value="stat"/>
 					Statistics
 				</div>
 
