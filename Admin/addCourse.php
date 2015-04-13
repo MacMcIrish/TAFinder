@@ -15,7 +15,7 @@
 
 		<style>
 			input, td {
-				width: 200px;
+				width: 150px;
 			}
 
 		</style>

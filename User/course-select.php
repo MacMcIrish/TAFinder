@@ -38,7 +38,6 @@ if(isset($_POST)){
 				}
 				?>
 			</table>
-			<?php echo $_SESSION['session']; ?>
 			<input type='submit'>
 		</form>
 	</body>

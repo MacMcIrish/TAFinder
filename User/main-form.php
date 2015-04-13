@@ -2,7 +2,6 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="form_css.css" />
 		<?php
-		include "form-check.php";
 
 		function endSession() {
 			session_destroy();

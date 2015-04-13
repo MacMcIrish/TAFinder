@@ -45,5 +45,5 @@ foreach ($workTable as $key => $value) {
 }
 fclose($workFile);
 
-//header('location:admin-front.php');
+header('location:admin-front.php');
 ?>
