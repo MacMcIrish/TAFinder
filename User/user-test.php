@@ -34,7 +34,7 @@ foreach ($fields as $key => $value) {
 }
 
 if(mysqli_query($conn, $userQuery)){
-	echo 'Succesful user Query<br><a href="http://localhost/tafinder/front-page.php">Go back</a>';
+	echo 'Application Succesful<br><a href="http://localhost/tafinder/front-page.php">Go back</a>';
 }else{
 	die('User already exists, only one application per applicant please.<br><a href="http://localhost/tafinder/front-page.php">Go back</a>');
 }
@@ -44,7 +44,9 @@ if(mysqli_query($conn, $userQuery)){
 foreach ($_POST['checked'] as $key => $value) {
 	if (isset($_POST['Taken'][$key])) {
 		if ($_POST['Taken'][$key] == 'on') {
-			$courseQuery = "INSERT INTO workson(studentNumber, courseID, semester, session) VALUES ('" . $user['studentNumber'] . "', '" . $value . "', '1', '" . $_SESSION['session'] . "')";
+			$v = explode(':', $value);
+			$courseQuery = "INSERT INTO workson(studentNumber, courseID, semester, session) VALUES ('" . $user['studentNumber'] . "', '" . $v[0] . "', '" . $v[1] . "', '" . $_SESSION['session'] . "')";
+			
 			mysqli_query($conn, $courseQuery);
 		}
 	}

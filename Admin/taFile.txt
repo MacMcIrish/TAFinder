@@ -1,3 +1,2 @@
-Jeff,Soloshy,1234,Arts,3,4321,jeffsoloshy@gmail.com,"13290 Broadwater Rd",Oyama,"V4V 2A",2505480033,2505480033,1,1,0,2,12,W2014
-Jeffrey,Soloshy,12345,Arts,3,,jeffsoloshy@gmail.com,219,Kelowna,V1Y9W1,7782152237,7782152237,1,1,0,2,12,W2014
-Jeff2,Soloshy,345678,Applied,G,1234567,jeffsoloshy@gmail.com,219,Kelowna,V1Y9W1,7782152237,7782152237,1,1,0,2,12,W2014
+John,Doe,1234,Arts,G,7890,john@doe.com,"1234 st",Kelowna,A1A1A1,5551234,5557890,1,1,0,2,6,W2014
+Jeff,Soloshy,3462,Science,3,0104,jeffsoloshy@gmail.com,219,Kelowna,V1Y9W1,7782152237,7782152237,1,1,0,2,12,W2014

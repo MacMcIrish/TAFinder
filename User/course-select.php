@@ -14,6 +14,13 @@ if(isset($_POST)){
 		<h1>Select from available courses</h1>
 		<form name='userSubmit' action='user-test.php' method='post'>
 			<table>
+				<tr>
+					<td></td>
+					<td>Course</td>
+					<td>Semester</td>
+					<td>Hours</td>
+					<td>Previously taken</td>
+				</tr>
 				<?php
 				$table = 'admin';
 				$session = $_POST['session'];
@@ -25,14 +32,17 @@ if(isset($_POST)){
 						$courseListQuery = $courseListQuery . ' OR ';
 					}
 				}
-				$query = 'SELECT Course FROM ' . $table . ' WHERE session="' . $session . '" ' . $courseListQuery ;
+				$query = 'SELECT Course, Term, Hours FROM ' . $table . ' WHERE (session="' . $session . '" ' . $courseListQuery . ') AND Hours BETWEEN 2 AND ' . $_POST['maxHours'] ;
+				
 				$result = mysqli_query($conn, $query);
 				$i = 0;
 				while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
 					echo '<tr>
-							<td><input type="checkbox" name="checked[' . $i . ']" value="' . $row[0] . '"></td>
+							<td><input type="checkbox" name="checked[' . $i . ']" value="' . $row[0] . ':' . $row[1] . '"></td>
 							<td>' . $row[0] . '</td>
-							<td><input type="checkbox" name="Taken[' . $i . ']">Taken?</td>
+							<td>' . $row[1] . '</td>
+							<td>' . $row[2] . '</td>
+							<td><input type="checkbox" name="Taken[' . $i . ']"></td>
 						  </tr>';
 						  $i++;
 				}
