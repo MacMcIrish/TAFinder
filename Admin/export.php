@@ -17,7 +17,7 @@ foreach ($taTable as $key => $value) {
 }
 fclose($TAFile);
 
-$query = 'SELECT * FROM admin WHERE session="' . $session . '"';
+$query = 'SELECT * FROM admin WHERE session="' . $session . '" ORDER BY Term';
 $courseTable = [];
 
 $result = mysqli_query($conn, $query);
@@ -45,5 +45,10 @@ foreach ($workTable as $key => $value) {
 }
 fclose($workFile);
 
-header('location:admin-front.php');
+$files = array('workFile.txt', 'taFile.txt', 'courseFile.txt');
+
+print_r($files);
+
+header('location:zip.php');
+
 ?>

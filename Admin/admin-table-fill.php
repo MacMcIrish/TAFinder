@@ -6,7 +6,7 @@ if(!isset($_SESSION['session'])){
 include 'session-connect.php';
 $table = 'admin';
 
-$query = 'SELECT Course, Term, Hours, Status, Day, Start, End, session FROM ' . $table . ' WHERE session="' . $_SESSION['session'] . '"';
+$query = 'SELECT Course, Term, Hours, Status, Day, Start, End, session FROM ' . $table . ' WHERE session="' . $_SESSION['session'] . '" ORDER BY Course';
 $getRowsQuery = 'SHOW COLUMNS FROM ' . $table;
 
 $rowResult = mysqli_query($conn, $getRowsQuery);

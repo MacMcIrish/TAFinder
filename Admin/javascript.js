@@ -34,9 +34,9 @@ function addNewRow() {
 	td7 = document.createElement('td');
 	td7.appendChild(newEnd);
 	
-	newSemester = document.createElement('input');
+	newSession = document.createElement('input');
 	td8 = document.createElement('td');
-	td8.appendChild(newSemester);
+	td8.appendChild(newSession);
 	
 
 	tr.appendChild(td1);
@@ -71,8 +71,8 @@ function addNewRow() {
 	newEnd.setAttribute('name', 'end[]');
 	newEnd.setAttribute('type', 'text');
 	
-	newSemester.setAttribute('name', 'session[]');
-	newSemester.setAttribute('value', session);
-	newSemester.readOnly = true;
+	newSession.setAttribute('name', 'session[]');
+	newSession.setAttribute('value', session);
+	newSession.readOnly = true;
 
 }
