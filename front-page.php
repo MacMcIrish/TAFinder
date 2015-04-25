@@ -24,7 +24,6 @@
 			footer {
 				border-top: solid black 1px;
 				height: 2em;
-				padding-left: 95%;
 			}
 			a {
 				position: absolute;
@@ -46,7 +45,10 @@
 			</form>
 		</div>
 		<footer>
-			<a class='admin' href='login.php'>Sign in</a>
+			<p style='text-align: left; position: absolute; margin-top: 0'>
+				TA Finder v.08
+			</p>
+			<a style='padding-left: 95%; position: absolute' class='admin' href='login.php'>Sign in</a>
 		</footer>
 	</body>
 

@@ -1,12 +1,12 @@
 <?php
 include 'session-connect.php';
+session_start();
 $p = $_POST;
-print_r($_POST);
 $query = 'UPDATE admin SET Course="' . $p['Course'] . 
 	'", Term="' . $p['Term'] . '", Hours="' . $p['Hours'] . '", Status="' . $p['Status'] .
 	'", Day="' . $p['Day'] . '", Start="' . $p['Start'] . '", End="' . $p['End'] . 
-	'", session="' . $p['session'] . '" WHERE Course="' . $p['Course'] .
-	'" AND Term="' . $p['Term'] . '" AND session="' . $p['session'] . '"';
+	'", session="' . $p['session'] . '" WHERE Course="' . $_SESSION['Course'] .
+	'" AND Term="' . $_SESSION['Term'] . '" AND session="' . $_SESSION['session'] . '"';
 	
 	
 	

@@ -7,6 +7,7 @@ $loginPass = $_POST['password'];
 $loginPass = stripslashes($loginPass);
 
 $hashed = hash('sha256', $loginPass, 'false');
+echo $hashed;
 
 $query = "SELECT email, hash, priv FROM login WHERE email='" . $loginUser . "' AND hash='" . $hashed . "'";
 

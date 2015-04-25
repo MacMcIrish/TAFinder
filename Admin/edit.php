@@ -11,7 +11,9 @@ session_start();
 		<table>
 			<?php
 			echo '<tr>';
-
+			$_SESSION['Term'] = $_POST['Term'];
+			$_SESSION['Course'] = $_POST['Course'];
+			$_SESSION['session'] = $_POST['session'];
 			$r = mysqli_query($conn, 'SHOW COLUMNS FROM admin');
 			$columns = [];
 			while ($row = mysqli_fetch_assoc($r)) {
